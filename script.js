@@ -23,7 +23,29 @@ document.querySelector(".gallery"),
 document.querySelector(".ending")
 ];
 
-openBtn.addEventListener("click",()=>{
+openBtn.addEventListener("click",()=>{for(let i=0;i<25;i++){
+
+setTimeout(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(18+Math.random()*18)+"px";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},i*120);
+
+    }
 
 openBtn.disabled=true;
 
