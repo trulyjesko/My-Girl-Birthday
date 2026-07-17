@@ -28,8 +28,9 @@ openBtn.addEventListener("click",()=>{
     const music = document.getElementById("bgMusic");
 
 if (music) {
-    music.play().catch(() => {});
-}
+    music.volume = 0.35;
+    music.play().catch(err => console.error(err));
+        } 
     
     for(let i=0;i<25;i++){
 
