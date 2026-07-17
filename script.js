@@ -37,6 +37,8 @@ heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
 
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+heart.style.transform = `rotate(${Math.random()*360}deg)`;
 heart.style.fontSize=(18+Math.random()*18)+"px";
 
 hearts.appendChild(heart);
