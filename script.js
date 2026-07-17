@@ -24,6 +24,12 @@ document.querySelector(".ending")
 ];
 
 openBtn.addEventListener("click",()=>{
+
+    const music = document.getElementById("bgMusic");
+
+if (music) {
+    music.play().catch(() => {});
+}
     
     for(let i=0;i<25;i++){
 
