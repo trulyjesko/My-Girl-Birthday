@@ -23,7 +23,9 @@ document.querySelector(".gallery"),
 document.querySelector(".ending")
 ];
 
-openBtn.addEventListener("click",()=>{for(let i=0;i<25;i++){
+openBtn.addEventListener("click",()=>{
+    
+    for(let i=0;i<25;i++){
 
 setTimeout(()=>{
 
