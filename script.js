@@ -3,32 +3,54 @@ window.addEventListener("load", () => {
     const loading = document.getElementById("loading");
     const hero = document.getElementById("hero");
 
+    hero.style.display = "none";
+
     setTimeout(() => {
         loading.style.display = "none";
         hero.style.display = "flex";
-    }, 1800);
+    },2000);
 
 });
 
-const openBtn = document.getElementById("openBtn");
+const openBtn=document.getElementById("openBtn");
 
-const sections = document.querySelectorAll(
-    ".message, .letter, .gallery, .ending"
-);
+const hero=document.getElementById("hero");
 
-openBtn.addEventListener("click", () => {
+const sections=[
+document.querySelector(".message"),
+document.querySelector(".letter"),
+document.querySelector(".gallery"),
+document.querySelector(".ending")
+];
 
-    sections.forEach((section, index) => {
+openBtn.addEventListener("click",()=>{
 
-        setTimeout(() => {
-            section.classList.remove("hidden");
-            section.scrollIntoView({
-                behavior: "smooth"
-            });
-        }, index * 700);
+openBtn.disabled=true;
 
-    });
+hero.style.opacity="0";
 
-    openBtn.style.display = "none";
+setTimeout(()=>{
+
+hero.style.display="none";
+
+sections.forEach((section,index)=>{
+
+setTimeout(()=>{
+
+section.classList.remove("hidden");
+
+if(index===0){
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+},index*900);
+
+});
+
+},700);
 
 });
