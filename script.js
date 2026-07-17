@@ -15,9 +15,7 @@ window.addEventListener("load", () => {
 const openBtn=document.getElementById("openBtn");
 
 const hero=document.getElementById("hero");
-
 const hearts=document.getElementById("hearts");
-
 const sections=[
 document.querySelector(".message"),
 document.querySelector(".letter"),
