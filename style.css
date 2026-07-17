@@ -154,13 +154,16 @@ opacity:.3;
     object-position:center;
     border-radius:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.35s;
+    transition:transform .35s ease, box-shadow .35s ease;
     cursor:pointer;
-}
+      }
+
 
 .photos img:hover{
     transform:scale(1.05) rotate(-2deg);
-}
+    box-shadow:0 18px 35px rgba(255,95,150,.35);
+  }
+
 
 @keyframes slideUp{
 
